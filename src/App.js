@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import List from './List'
-import './App.css';
+import React, {Component} from 'react';
+import List from './list';
+import STORE from './store';
 
 class App extends Component {
   static defaultProps = {
@@ -27,8 +27,38 @@ class App extends Component {
           ))}
         </div>
       </main>
+
     );
   }
 }
+
+// function App(props) {
+//   const STORE = props.STORE;
+//   const cardsArr = [];
+//     for (let i = 0; i < STORE.lists.length; i++){
+//         let objArr = [];
+//       // get the objects from allCards
+//         for (let key in STORE.allCards) {
+//           if (STORE.lists[i].cardIds.includes(key)) {
+//             objArr.push(STORE.allCards[key]);
+//           }
+//         }
+//         cardsArr.push(
+//             <List key={STORE.lists[i].id} header={STORE.lists[i].header} cards={objArr} />
+//         )
+//     }
+
+
+//   return (
+//     <main className='App'>
+//       <header class="App-header">
+//         <h1>Trelloyes!</h1>
+//       </header>
+//       <div class="App-list">
+//         {cardsArr}
+//       </div>
+//     </main>
+//   );
+// }
 
 export default App;
